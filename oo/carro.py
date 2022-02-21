@@ -4,6 +4,7 @@ class Motor:
 
     def acelerar(self):
         self.velocidade += 1
+
     def frear(self):
         if self.velocidade <= 2 :
             self.velocidade = 0
