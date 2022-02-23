@@ -19,8 +19,12 @@ class Pessoa:
 class Homem(Pessoa):
     pass
 
+class Mutante(Pessoa):
+    olhos = 3
+
+
 if __name__ == '__main__':
-    renzo = Homem (nome = 'Renzo')
+    renzo = Mutante(nome = 'Renzo')
     daniel = Pessoa(renzo, nome ='Daniel')
     print(Pessoa.comprimentar(daniel))
     print(daniel.comprimentar())
@@ -32,7 +36,6 @@ if __name__ == '__main__':
     daniel.sobrenome = 'Matos'
     print(daniel.sobrenome)
     del daniel.filhos
-    renzo.olhos = 1
     print(daniel.__dict__)
     print(renzo.__dict__)
     print(daniel.olhos)
@@ -45,3 +48,4 @@ if __name__ == '__main__':
     print(isinstance(pessoa, Homem))
     print(isinstance(renzo, Pessoa))
     print(isinstance(renzo, Homem))
+    print(renzo.olhos)
